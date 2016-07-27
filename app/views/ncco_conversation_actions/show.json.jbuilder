@@ -1,0 +1,1 @@
+json.partial! "ncco_conversation_actions/ncco_conversation_action", ncco_conversation_action: @ncco_conversation_action

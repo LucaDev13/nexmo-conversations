@@ -1,0 +1,78 @@
+<%= form_for(ncco_conversation_action) do |f| %>
+  <% if ncco_conversation_action.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(ncco_conversation_action.errors.count, "error") %> prohibited this ncco_conversation_action from being saved:</h2>
+
+      <ul>
+      <% ncco_conversation_action.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :mute %>
+    <%= f.text_field :mute %>
+  </div>
+
+  <div class="field">
+    <%= f.label :earmuff %>
+    <%= f.text_field :earmuff %>
+  </div>
+
+  <div class="field">
+    <%= f.label :event_url %>
+    <%= f.text_field :event_url %>
+  </div>
+
+  <div class="field">
+    <%= f.label :event_method %>
+    <%= f.text_field :event_method %>
+  </div>
+
+  <div class="field">
+    <%= f.label :enter_sound %>
+    <%= f.text_field :enter_sound %>
+  </div>
+
+  <div class="field">
+    <%= f.label :exit_sound %>
+    <%= f.text_field :exit_sound %>
+  </div>
+
+  <div class="field">
+    <%= f.label :music_on_hold_url %>
+    <%= f.text_field :music_on_hold_url %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sound_on_enter %>
+    <%= f.text_field :sound_on_enter %>
+  </div>
+
+  <div class="field">
+    <%= f.label :end_on_exit %>
+    <%= f.text_field :end_on_exit %>
+  </div>
+
+  <div class="field">
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+  </div>
+
+  <div class="field">
+    <%= f.label :moderator_controls %>
+    <%= f.text_field :moderator_controls %>
+  </div>
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

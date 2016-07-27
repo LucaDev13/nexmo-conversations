@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  mute: MyString
+  earmuff: MyString
+  event_url: MyString
+  event_method: MyString
+  enter_sound: MyString
+  exit_sound: MyString
+  music_on_hold_url: MyString
+  sound_on_enter: MyString
+  end_on_exit: MyString
+  location: MyString
+  moderator_controls: MyString
+  record: MyString
+
+two:
+  name: MyString
+  mute: MyString
+  earmuff: MyString
+  event_url: MyString
+  event_method: MyString
+  enter_sound: MyString
+  exit_sound: MyString
+  music_on_hold_url: MyString
+  sound_on_enter: MyString
+  end_on_exit: MyString
+  location: MyString
+  moderator_controls: MyString
+  record: MyString
