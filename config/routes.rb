@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :ncco_input_actions
   resources :ncco_stream_actions
   resources :ncco_talk_actions
   resources :ncco_connect_actions

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  time_out: MyString
+  max_digits: MyString
+  submit_on_hash: MyString
+  event_url: MyString
+  event_method: MyString
+
+two:
+  time_out: MyString
+  max_digits: MyString
+  submit_on_hash: MyString
+  event_url: MyString
+  event_method: MyString

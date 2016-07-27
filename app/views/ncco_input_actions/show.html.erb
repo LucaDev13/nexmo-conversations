@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Time out:</strong>
+  <%= @ncco_input_action.time_out %>
+</p>
+
+<p>
+  <strong>Max digits:</strong>
+  <%= @ncco_input_action.max_digits %>
+</p>
+
+<p>
+  <strong>Submit on hash:</strong>
+  <%= @ncco_input_action.submit_on_hash %>
+</p>
+
+<p>
+  <strong>Event url:</strong>
+  <%= @ncco_input_action.event_url %>
+</p>
+
+<p>
+  <strong>Event method:</strong>
+  <%= @ncco_input_action.event_method %>
+</p>
+
+<%= link_to 'Edit', edit_ncco_input_action_path(@ncco_input_action) %> |
+<%= link_to 'Back', ncco_input_actions_path %>

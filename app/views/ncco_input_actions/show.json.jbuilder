@@ -1,0 +1,1 @@
+json.partial! "ncco_input_actions/ncco_input_action", ncco_input_action: @ncco_input_action

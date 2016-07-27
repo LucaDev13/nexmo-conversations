@@ -1,0 +1,2 @@
+class NccoInputAction < ApplicationRecord
+end

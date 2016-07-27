@@ -1,0 +1,1 @@
+json.array! @ncco_input_actions, partial: 'ncco_input_actions/ncco_input_action', as: :ncco_input_action

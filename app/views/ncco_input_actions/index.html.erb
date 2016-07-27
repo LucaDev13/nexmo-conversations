@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Ncco Input Actions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Time out</th>
+      <th>Max digits</th>
+      <th>Submit on hash</th>
+      <th>Event url</th>
+      <th>Event method</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ncco_input_actions.each do |ncco_input_action| %>
+      <tr>
+        <td><%= ncco_input_action.time_out %></td>
+        <td><%= ncco_input_action.max_digits %></td>
+        <td><%= ncco_input_action.submit_on_hash %></td>
+        <td><%= ncco_input_action.event_url %></td>
+        <td><%= ncco_input_action.event_method %></td>
+        <td><%= link_to 'Show', ncco_input_action %></td>
+        <td><%= link_to 'Edit', edit_ncco_input_action_path(ncco_input_action) %></td>
+        <td><%= link_to 'Destroy', ncco_input_action, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ncco Input Action', new_ncco_input_action_path %>

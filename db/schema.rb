@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160727221634) do
+ActiveRecord::Schema.define(version: 20160727222106) do
 
   create_table "ncco_connect_actions", force: :cascade do |t|
     t.string   "event_url"
@@ -41,6 +41,16 @@ ActiveRecord::Schema.define(version: 20160727221634) do
     t.string   "moderator_controls"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
+  end
+
+  create_table "ncco_input_actions", force: :cascade do |t|
+    t.string   "time_out"
+    t.string   "max_digits"
+    t.string   "submit_on_hash"
+    t.string   "event_url"
+    t.string   "event_method"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
   create_table "ncco_record_actions", force: :cascade do |t|
