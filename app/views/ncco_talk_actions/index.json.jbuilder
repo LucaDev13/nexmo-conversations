@@ -1,0 +1,1 @@
+json.array! @ncco_talk_actions, partial: 'ncco_talk_actions/ncco_talk_action', as: :ncco_talk_action

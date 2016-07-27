@@ -1,0 +1,2 @@
+class NccoTalkAction < ApplicationRecord
+end

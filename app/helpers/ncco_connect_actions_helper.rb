@@ -1,0 +1,2 @@
+module NccoConnectActionsHelper
+end

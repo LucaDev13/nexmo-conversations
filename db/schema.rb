@@ -10,7 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160727171836) do
+ActiveRecord::Schema.define(version: 20160727221035) do
+
+  create_table "ncco_connect_actions", force: :cascade do |t|
+    t.string   "event_url"
+    t.string   "event_method"
+    t.string   "backup_url"
+    t.string   "backup_method"
+    t.string   "timeout"
+    t.string   "limit"
+    t.string   "from"
+    t.string   "halt_on_fail"
+    t.string   "endpoint"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
 
   create_table "ncco_conversation_actions", force: :cascade do |t|
     t.string   "name"
@@ -47,6 +61,15 @@ ActiveRecord::Schema.define(version: 20160727171836) do
     t.string   "secure"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+  end
+
+  create_table "ncco_talk_actions", force: :cascade do |t|
+    t.string   "loop"
+    t.string   "text"
+    t.string   "level"
+    t.string   "voice_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Ncco Talk Actions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Loop</th>
+      <th>Text</th>
+      <th>Level</th>
+      <th>Voice name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ncco_talk_actions.each do |ncco_talk_action| %>
+      <tr>
+        <td><%= ncco_talk_action.loop %></td>
+        <td><%= ncco_talk_action.text %></td>
+        <td><%= ncco_talk_action.level %></td>
+        <td><%= ncco_talk_action.voice_name %></td>
+        <td><%= link_to 'Show', ncco_talk_action %></td>
+        <td><%= link_to 'Edit', edit_ncco_talk_action_path(ncco_talk_action) %></td>
+        <td><%= link_to 'Destroy', ncco_talk_action, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ncco Talk Action', new_ncco_talk_action_path %>

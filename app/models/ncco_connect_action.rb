@@ -1,0 +1,2 @@
+class NccoConnectAction < ApplicationRecord
+end

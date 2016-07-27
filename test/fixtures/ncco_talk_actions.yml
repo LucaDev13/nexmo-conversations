@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  loop: MyString
+  text: MyString
+  level: MyString
+  voice_name: MyString
+
+two:
+  loop: MyString
+  text: MyString
+  level: MyString
+  voice_name: MyString

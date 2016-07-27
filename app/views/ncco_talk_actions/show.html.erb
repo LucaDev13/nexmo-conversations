@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Loop:</strong>
+  <%= @ncco_talk_action.loop %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @ncco_talk_action.text %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @ncco_talk_action.level %>
+</p>
+
+<p>
+  <strong>Voice name:</strong>
+  <%= @ncco_talk_action.voice_name %>
+</p>
+
+<%= link_to 'Edit', edit_ncco_talk_action_path(@ncco_talk_action) %> |
+<%= link_to 'Back', ncco_talk_actions_path %>

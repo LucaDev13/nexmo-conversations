@@ -1,0 +1,2 @@
+module NccoTalkActionsHelper
+end

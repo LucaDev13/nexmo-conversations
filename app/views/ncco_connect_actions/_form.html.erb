@@ -1,0 +1,67 @@
+<%= form_for(ncco_connect_action) do |f| %>
+  <% if ncco_connect_action.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(ncco_connect_action.errors.count, "error") %> prohibited this ncco_connect_action from being saved:</h2>
+
+      <ul>
+      <% ncco_connect_action.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :event_url %>
+    <%= f.text_field :event_url %>
+  </div>
+
+  <div class="field">
+    <%= f.label :event_method %>
+    <%= f.text_field :event_method %>
+  </div>
+
+  <div class="field">
+    <%= f.label :backup_url %>
+    <%= f.text_field :backup_url %>
+  </div>
+
+  <div class="field">
+    <%= f.label :backup_url %>
+    <%= f.text_field :backup_url %>
+  </div>
+
+  <div class="field">
+    <%= f.label :backup_method %>
+    <%= f.text_field :backup_method %>
+  </div>
+
+  <div class="field">
+    <%= f.label :timeout %>
+    <%= f.text_field :timeout %>
+  </div>
+
+  <div class="field">
+    <%= f.label :limit %>
+    <%= f.text_field :limit %>
+  </div>
+
+  <div class="field">
+    <%= f.label :from %>
+    <%= f.text_field :from %>
+  </div>
+
+  <div class="field">
+    <%= f.label :halt_on_fail %>
+    <%= f.text_field :halt_on_fail %>
+  </div>
+
+  <div class="field">
+    <%= f.label :endpoint %>
+    <%= f.text_field :endpoint %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

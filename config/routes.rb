@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :ncco_talk_actions
+  resources :ncco_connect_actions
   root to: 'ncco_record_actions#index'
 
   resources :ncco_record_actions

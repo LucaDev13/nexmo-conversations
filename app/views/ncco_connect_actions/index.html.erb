@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Ncco Connect Actions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Event url</th>
+      <th>Event method</th>
+      <th>Backup url</th>
+      <th>Backup url</th>
+      <th>Backup method</th>
+      <th>Timeout</th>
+      <th>Limit</th>
+      <th>From</th>
+      <th>Halt on fail</th>
+      <th>Endpoint</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ncco_connect_actions.each do |ncco_connect_action| %>
+      <tr>
+        <td><%= ncco_connect_action.event_url %></td>
+        <td><%= ncco_connect_action.event_method %></td>
+        <td><%= ncco_connect_action.backup_url %></td>
+        <td><%= ncco_connect_action.backup_url %></td>
+        <td><%= ncco_connect_action.backup_method %></td>
+        <td><%= ncco_connect_action.timeout %></td>
+        <td><%= ncco_connect_action.limit %></td>
+        <td><%= ncco_connect_action.from %></td>
+        <td><%= ncco_connect_action.halt_on_fail %></td>
+        <td><%= ncco_connect_action.endpoint %></td>
+        <td><%= link_to 'Show', ncco_connect_action %></td>
+        <td><%= link_to 'Edit', edit_ncco_connect_action_path(ncco_connect_action) %></td>
+        <td><%= link_to 'Destroy', ncco_connect_action, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ncco Connect Action', new_ncco_connect_action_path %>

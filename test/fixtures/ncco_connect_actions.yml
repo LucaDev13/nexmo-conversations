@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  event_url: MyString
+  event_method: MyString
+  backup_url: MyString
+  backup_url: MyString
+  backup_method: MyString
+  timeout: MyString
+  limit: MyString
+  from: MyString
+  halt_on_fail: MyString
+  endpoint: MyString
+
+two:
+  event_url: MyString
+  event_method: MyString
+  backup_url: MyString
+  backup_url: MyString
+  backup_method: MyString
+  timeout: MyString
+  limit: MyString
+  from: MyString
+  halt_on_fail: MyString
+  endpoint: MyString
