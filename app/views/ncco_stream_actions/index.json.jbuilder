@@ -1,0 +1,1 @@
+json.array! @ncco_stream_actions, partial: 'ncco_stream_actions/ncco_stream_action', as: :ncco_stream_action

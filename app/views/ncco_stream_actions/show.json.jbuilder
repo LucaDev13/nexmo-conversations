@@ -1,0 +1,1 @@
+json.partial! "ncco_stream_actions/ncco_stream_action", ncco_stream_action: @ncco_stream_action

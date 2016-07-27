@@ -1,0 +1,2 @@
+class NccoStreamAction < ApplicationRecord
+end

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Stream url:</strong>
+  <%= @ncco_stream_action.stream_url %>
+</p>
+
+<p>
+  <strong>Loop:</strong>
+  <%= @ncco_stream_action.loop %>
+</p>
+
+<%= link_to 'Edit', edit_ncco_stream_action_path(@ncco_stream_action) %> |
+<%= link_to 'Back', ncco_stream_actions_path %>
