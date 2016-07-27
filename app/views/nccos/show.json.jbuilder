@@ -1,0 +1,1 @@
+json.partial! "nccos/ncco", ncco: @ncco

@@ -1,0 +1,2 @@
+module NccosHelper
+end

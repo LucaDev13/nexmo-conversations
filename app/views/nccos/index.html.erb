@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Nccos</h1>
+
+<p>A Nexmo Call Control Object (NCCO) is a JSON array of actions that you use to control the flow of a Voice API Call. The Call event model is asynchronous. A static or dynamically created NCCO script provides the business logic for your Call.
+The general schema of an NCCO is:</p>
+
+<p>
+  [
+  {
+    "action": "<value>",
+    "<option1>": "<value>",
+    "<option2>": [
+      {
+        "type": "<value>",
+        "<option1>": "<value>"
+      },
+      {
+        "type": "<value>",
+        "<option1>": "<value>",
+        "<option2>": "<value>"
+      }
+    ]
+  }
+]
+</p>
+
+<p>The following words are reserved:</p>
+
+<p>action - something to be done in the Call</p>
+<p>type - how to customize the action</p>
+<p>The order of actions in the NCCO controls the flow of the Call. This is called the stack. Unless explicitly halted NCCOs are executed in order (FIFO). When an action is completed, the next action in the stack is executed. When all the actions in the NCCO are complete, the Call ends.</p>
+
+<p>For more information, see Nexmo Call Control Objects</p>

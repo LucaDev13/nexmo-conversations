@@ -1,0 +1,2 @@
+class Ncco < ApplicationRecord
+end

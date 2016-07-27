@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160727222106) do
+ActiveRecord::Schema.define(version: 20160727223001) do
 
   create_table "ncco_connect_actions", force: :cascade do |t|
     t.string   "event_url"
@@ -85,6 +85,11 @@ ActiveRecord::Schema.define(version: 20160727222106) do
     t.string   "text"
     t.string   "level"
     t.string   "voice_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "nccos", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
