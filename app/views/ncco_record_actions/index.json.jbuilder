@@ -1,0 +1,1 @@
+json.array! @ncco_record_actions, partial: 'ncco_record_actions/ncco_record_action', as: :ncco_record_action

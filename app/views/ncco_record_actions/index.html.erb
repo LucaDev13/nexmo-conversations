@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Ncco Record Actions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Format</th>
+      <th>Split</th>
+      <th>Start on answer</th>
+      <th>End on key</th>
+      <th>Destination url</th>
+      <th>Streamed</th>
+      <th>Limit</th>
+      <th>Validity time</th>
+      <th>Event url</th>
+      <th>Event method</th>
+      <th>Backup url</th>
+      <th>Backup method</th>
+      <th>Beep start</th>
+      <th>Beep finish</th>
+      <th>Secure</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ncco_record_actions.each do |ncco_record_action| %>
+      <tr>
+        <td><%= ncco_record_action.format %></td>
+        <td><%= ncco_record_action.split %></td>
+        <td><%= ncco_record_action.start_on_answer %></td>
+        <td><%= ncco_record_action.end_on_key %></td>
+        <td><%= ncco_record_action.destination_url %></td>
+        <td><%= ncco_record_action.streamed %></td>
+        <td><%= ncco_record_action.limit %></td>
+        <td><%= ncco_record_action.validity_time %></td>
+        <td><%= ncco_record_action.event_url %></td>
+        <td><%= ncco_record_action.event_method %></td>
+        <td><%= ncco_record_action.backup_url %></td>
+        <td><%= ncco_record_action.backup_method %></td>
+        <td><%= ncco_record_action.beep_start %></td>
+        <td><%= ncco_record_action.beep_finish %></td>
+        <td><%= ncco_record_action.secure %></td>
+        <td><%= link_to 'Show', ncco_record_action %></td>
+        <td><%= link_to 'Edit', edit_ncco_record_action_path(ncco_record_action) %></td>
+        <td><%= link_to 'Destroy', ncco_record_action, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ncco Record Action', new_ncco_record_action_path %>

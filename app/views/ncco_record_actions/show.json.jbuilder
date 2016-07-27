@@ -1,0 +1,1 @@
+json.partial! "ncco_record_actions/ncco_record_action", ncco_record_action: @ncco_record_action

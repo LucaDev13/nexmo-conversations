@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  format: MyString
+  split: MyString
+  start_on_answer: MyString
+  end_on_key: MyString
+  destination_url: MyString
+  streamed: MyString
+  limit: MyString
+  validity_time: MyString
+  event_url: MyString
+  event_method: MyString
+  backup_url: MyString
+  backup_method: MyString
+  beep_start: MyString
+  beep_finish: MyString
+  secure: MyString
+
+two:
+  format: MyString
+  split: MyString
+  start_on_answer: MyString
+  end_on_key: MyString
+  destination_url: MyString
+  streamed: MyString
+  limit: MyString
+  validity_time: MyString
+  event_url: MyString
+  event_method: MyString
+  backup_url: MyString
+  backup_method: MyString
+  beep_start: MyString
+  beep_finish: MyString
+  secure: MyString

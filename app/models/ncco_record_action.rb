@@ -1,0 +1,2 @@
+class NccoRecordAction < ApplicationRecord
+end

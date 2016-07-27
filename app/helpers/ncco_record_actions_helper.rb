@@ -1,0 +1,2 @@
+module NccoRecordActionsHelper
+end
