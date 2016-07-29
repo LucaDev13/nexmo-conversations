@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :event_urls
   root to: 'nccos#index'
   
   resources :nccos

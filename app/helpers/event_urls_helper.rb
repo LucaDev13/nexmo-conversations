@@ -1,0 +1,2 @@
+module EventUrlsHelper
+end

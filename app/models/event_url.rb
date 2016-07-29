@@ -1,0 +1,2 @@
+class EventUrl < ApplicationRecord
+end
