@@ -1,92 +1,132 @@
-<%= form_for(ncco_record_action) do |f| %>
-  <% if ncco_record_action.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(ncco_record_action.errors.count, "error") %> prohibited this ncco_record_action from being saved:</h2>
+<%= form_for @ncco_record_action, :html => { :class => "form-horizontal ncco_record_action" } do |f| %>
 
-      <ul>
-      <% ncco_record_action.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+  <% if @ncco_record_action.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@ncco_record_action.errors.count, "error") %> prohibited this ncco_record_action from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @ncco_record_action.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :format %>
-    <%= f.text_field :format %>
+  <div class="form-group">
+    <%= f.label :format, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :format, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:format) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :split, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :split, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:split) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :start_on_answer, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :start_on_answer, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:start_on_answer) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :end_on_key, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :end_on_key, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:end_on_key) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :destination_url, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :destination_url, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:destination_url) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :streamed, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :streamed, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:streamed) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :limit, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :limit, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:limit) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :validity_time, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :validity_time, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:validity_time) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :event_url, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :event_url, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:event_url) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :event_method, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :event_method, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:event_method) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :backup_url, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :backup_url, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:backup_url) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :backup_method, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :backup_method, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:backup_method) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :beep_start, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :beep_start, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:beep_start) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :beep_finish, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :beep_finish, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:beep_finish) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :secure, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :secure, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:secure) %>
   </div>
 
-  <div class="field">
-    <%= f.label :split %>
-    <%= f.text_field :split %>
+  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                ncco_record_actions_path, :class => 'btn btn-default' %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :start_on_answer %>
-    <%= f.text_field :start_on_answer %>
-  </div>
-
-  <div class="field">
-    <%= f.label :end_on_key %>
-    <%= f.text_field :end_on_key %>
-  </div>
-
-  <div class="field">
-    <%= f.label :destination_url %>
-    <%= f.text_field :destination_url %>
-  </div>
-
-  <div class="field">
-    <%= f.label :streamed %>
-    <%= f.text_field :streamed %>
-  </div>
-
-  <div class="field">
-    <%= f.label :limit %>
-    <%= f.text_field :limit %>
-  </div>
-
-  <div class="field">
-    <%= f.label :validity_time %>
-    <%= f.text_field :validity_time %>
-  </div>
-
-  <div class="field">
-    <%= f.label :event_url %>
-    <%= f.text_field :event_url %>
-  </div>
-
-  <div class="field">
-    <%= f.label :event_method %>
-    <%= f.text_field :event_method %>
-  </div>
-
-  <div class="field">
-    <%= f.label :backup_url %>
-    <%= f.text_field :backup_url %>
-  </div>
-
-  <div class="field">
-    <%= f.label :backup_method %>
-    <%= f.text_field :backup_method %>
-  </div>
-
-  <div class="field">
-    <%= f.label :beep_start %>
-    <%= f.text_field :beep_start %>
-  </div>
-
-  <div class="field">
-    <%= f.label :beep_finish %>
-    <%= f.text_field :beep_finish %>
-  </div>
-
-  <div class="field">
-    <%= f.label :secure %>
-    <%= f.text_field :secure %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
 <% end %>

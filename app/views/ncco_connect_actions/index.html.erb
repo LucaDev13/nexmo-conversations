@@ -1,30 +1,30 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Ncco Connect Actions</h1>
-
-<table>
+<%- model_class = NccoConnectAction -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
   <thead>
     <tr>
-      <th>Event url</th>
-      <th>Event method</th>
-      <th>Backup url</th>
-      <th>Backup url</th>
-      <th>Backup method</th>
-      <th>Timeout</th>
-      <th>Limit</th>
-      <th>From</th>
-      <th>Halt on fail</th>
-      <th>Endpoint</th>
-      <th colspan="3"></th>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:event_url) %></th>
+      <th><%= model_class.human_attribute_name(:event_method) %></th>
+      <th><%= model_class.human_attribute_name(:backup_url) %></th>
+      <th><%= model_class.human_attribute_name(:backup_method) %></th>
+      <th><%= model_class.human_attribute_name(:timeout) %></th>
+      <th><%= model_class.human_attribute_name(:limit) %></th>
+      <th><%= model_class.human_attribute_name(:from) %></th>
+      <th><%= model_class.human_attribute_name(:halt_on_fail) %></th>
+      <th><%= model_class.human_attribute_name(:endpoint) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
-
   <tbody>
     <% @ncco_connect_actions.each do |ncco_connect_action| %>
       <tr>
+        <td><%= link_to ncco_connect_action.id, ncco_connect_action_path(ncco_connect_action) %></td>
         <td><%= ncco_connect_action.event_url %></td>
         <td><%= ncco_connect_action.event_method %></td>
-        <td><%= ncco_connect_action.backup_url %></td>
         <td><%= ncco_connect_action.backup_url %></td>
         <td><%= ncco_connect_action.backup_method %></td>
         <td><%= ncco_connect_action.timeout %></td>
@@ -32,14 +32,21 @@
         <td><%= ncco_connect_action.from %></td>
         <td><%= ncco_connect_action.halt_on_fail %></td>
         <td><%= ncco_connect_action.endpoint %></td>
-        <td><%= link_to 'Show', ncco_connect_action %></td>
-        <td><%= link_to 'Edit', edit_ncco_connect_action_path(ncco_connect_action) %></td>
-        <td><%= link_to 'Destroy', ncco_connect_action, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%=l ncco_connect_action.created_at %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_ncco_connect_action_path(ncco_connect_action), :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      ncco_connect_action_path(ncco_connect_action),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-xs btn-danger' %>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Ncco Connect Action', new_ncco_connect_action_path %>
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_ncco_connect_action_path,
+            :class => 'btn btn-primary' %>

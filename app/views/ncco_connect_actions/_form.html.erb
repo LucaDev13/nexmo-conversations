@@ -1,67 +1,90 @@
-<%= form_for(ncco_connect_action) do |f| %>
-  <% if ncco_connect_action.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(ncco_connect_action.errors.count, "error") %> prohibited this ncco_connect_action from being saved:</h2>
+<%= form_for @ncco_connect_action, :html => { :class => "form-horizontal ncco_connect_action" } do |f| %>
 
-      <ul>
-      <% ncco_connect_action.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+  <% if @ncco_connect_action.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@ncco_connect_action.errors.count, "error") %> prohibited this ncco_connect_action from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @ncco_connect_action.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :event_url %>
-    <%= f.text_field :event_url %>
+  <div class="form-group">
+    <%= f.label :event_url, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :event_url, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:event_url) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :event_method, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :event_method, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:event_method) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :backup_url, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :backup_url, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:backup_url) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :backup_method, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :backup_method, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:backup_method) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :timeout, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :timeout, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:timeout) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :limit, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :limit, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:limit) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :from, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :from, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:from) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :halt_on_fail, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :halt_on_fail, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:halt_on_fail) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :endpoint, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :endpoint, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:endpoint) %>
   </div>
 
-  <div class="field">
-    <%= f.label :event_method %>
-    <%= f.text_field :event_method %>
+  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                ncco_connect_actions_path, :class => 'btn btn-default' %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :backup_url %>
-    <%= f.text_field :backup_url %>
-  </div>
-
-  <div class="field">
-    <%= f.label :backup_url %>
-    <%= f.text_field :backup_url %>
-  </div>
-
-  <div class="field">
-    <%= f.label :backup_method %>
-    <%= f.text_field :backup_method %>
-  </div>
-
-  <div class="field">
-    <%= f.label :timeout %>
-    <%= f.text_field :timeout %>
-  </div>
-
-  <div class="field">
-    <%= f.label :limit %>
-    <%= f.text_field :limit %>
-  </div>
-
-  <div class="field">
-    <%= f.label :from %>
-    <%= f.text_field :from %>
-  </div>
-
-  <div class="field">
-    <%= f.label :halt_on_fail %>
-    <%= f.text_field :halt_on_fail %>
-  </div>
-
-  <div class="field">
-    <%= f.label :endpoint %>
-    <%= f.text_field :endpoint %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
 <% end %>

@@ -1,14 +1,21 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = NccoStreamAction -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
 
-<p>
-  <strong>Stream url:</strong>
-  <%= @ncco_stream_action.stream_url %>
-</p>
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:stream_url) %>:</strong></dt>
+  <dd><%= @ncco_stream_action.stream_url %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:loop) %>:</strong></dt>
+  <dd><%= @ncco_stream_action.loop %></dd>
+</dl>
 
-<p>
-  <strong>Loop:</strong>
-  <%= @ncco_stream_action.loop %>
-</p>
-
-<%= link_to 'Edit', edit_ncco_stream_action_path(@ncco_stream_action) %> |
-<%= link_to 'Back', ncco_stream_actions_path %>
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              ncco_stream_actions_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_ncco_stream_action_path(@ncco_stream_action), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              ncco_stream_action_path(@ncco_stream_action),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>

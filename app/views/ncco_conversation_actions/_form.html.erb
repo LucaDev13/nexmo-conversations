@@ -1,78 +1,111 @@
-<%= form_for(ncco_conversation_action) do |f| %>
-  <% if ncco_conversation_action.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(ncco_conversation_action.errors.count, "error") %> prohibited this ncco_conversation_action from being saved:</h2>
+<%= form_for @ncco_conversation_action, :html => { :class => "form-horizontal ncco_conversation_action" } do |f| %>
 
-      <ul>
-      <% ncco_conversation_action.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+  <% if @ncco_conversation_action.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@ncco_conversation_action.errors.count, "error") %> prohibited this ncco_conversation_action from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @ncco_conversation_action.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+  <div class="form-group">
+    <%= f.label :name, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :name, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:name) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :mute, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :mute, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:mute) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :earmuff, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :earmuff, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:earmuff) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :event_url, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :event_url, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:event_url) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :event_method, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :event_method, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:event_method) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :enter_sound, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :enter_sound, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:enter_sound) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :exit_sound, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :exit_sound, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:exit_sound) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :music_on_hold_url, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :music_on_hold_url, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:music_on_hold_url) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :sound_on_enter, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :sound_on_enter, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:sound_on_enter) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :end_on_exit, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :end_on_exit, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:end_on_exit) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :location, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :location, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:location) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :moderator_controls, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :moderator_controls, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:moderator_controls) %>
   </div>
 
-  <div class="field">
-    <%= f.label :mute %>
-    <%= f.text_field :mute %>
+  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                ncco_conversation_actions_path, :class => 'btn btn-default' %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :earmuff %>
-    <%= f.text_field :earmuff %>
-  </div>
-
-  <div class="field">
-    <%= f.label :event_url %>
-    <%= f.text_field :event_url %>
-  </div>
-
-  <div class="field">
-    <%= f.label :event_method %>
-    <%= f.text_field :event_method %>
-  </div>
-
-  <div class="field">
-    <%= f.label :enter_sound %>
-    <%= f.text_field :enter_sound %>
-  </div>
-
-  <div class="field">
-    <%= f.label :exit_sound %>
-    <%= f.text_field :exit_sound %>
-  </div>
-
-  <div class="field">
-    <%= f.label :music_on_hold_url %>
-    <%= f.text_field :music_on_hold_url %>
-  </div>
-
-  <div class="field">
-    <%= f.label :sound_on_enter %>
-    <%= f.text_field :sound_on_enter %>
-  </div>
-
-  <div class="field">
-    <%= f.label :end_on_exit %>
-    <%= f.text_field :end_on_exit %>
-  </div>
-
-  <div class="field">
-    <%= f.label :location %>
-    <%= f.text_field :location %>
-  </div>
-
-  <div class="field">
-    <%= f.label :moderator_controls %>
-    <%= f.text_field :moderator_controls %>
-  </div>
-
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
 <% end %>

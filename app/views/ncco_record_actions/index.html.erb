@@ -1,32 +1,34 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Ncco Record Actions</h1>
-
-<table>
+<%- model_class = NccoRecordAction -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
   <thead>
     <tr>
-      <th>Format</th>
-      <th>Split</th>
-      <th>Start on answer</th>
-      <th>End on key</th>
-      <th>Destination url</th>
-      <th>Streamed</th>
-      <th>Limit</th>
-      <th>Validity time</th>
-      <th>Event url</th>
-      <th>Event method</th>
-      <th>Backup url</th>
-      <th>Backup method</th>
-      <th>Beep start</th>
-      <th>Beep finish</th>
-      <th>Secure</th>
-      <th colspan="3"></th>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:format) %></th>
+      <th><%= model_class.human_attribute_name(:split) %></th>
+      <th><%= model_class.human_attribute_name(:start_on_answer) %></th>
+      <th><%= model_class.human_attribute_name(:end_on_key) %></th>
+      <th><%= model_class.human_attribute_name(:destination_url) %></th>
+      <th><%= model_class.human_attribute_name(:streamed) %></th>
+      <th><%= model_class.human_attribute_name(:limit) %></th>
+      <th><%= model_class.human_attribute_name(:validity_time) %></th>
+      <th><%= model_class.human_attribute_name(:event_url) %></th>
+      <th><%= model_class.human_attribute_name(:event_method) %></th>
+      <th><%= model_class.human_attribute_name(:backup_url) %></th>
+      <th><%= model_class.human_attribute_name(:backup_method) %></th>
+      <th><%= model_class.human_attribute_name(:beep_start) %></th>
+      <th><%= model_class.human_attribute_name(:beep_finish) %></th>
+      <th><%= model_class.human_attribute_name(:secure) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
-
   <tbody>
     <% @ncco_record_actions.each do |ncco_record_action| %>
       <tr>
+        <td><%= link_to ncco_record_action.id, ncco_record_action_path(ncco_record_action) %></td>
         <td><%= ncco_record_action.format %></td>
         <td><%= ncco_record_action.split %></td>
         <td><%= ncco_record_action.start_on_answer %></td>
@@ -42,14 +44,21 @@
         <td><%= ncco_record_action.beep_start %></td>
         <td><%= ncco_record_action.beep_finish %></td>
         <td><%= ncco_record_action.secure %></td>
-        <td><%= link_to 'Show', ncco_record_action %></td>
-        <td><%= link_to 'Edit', edit_ncco_record_action_path(ncco_record_action) %></td>
-        <td><%= link_to 'Destroy', ncco_record_action, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%=l ncco_record_action.created_at %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_ncco_record_action_path(ncco_record_action), :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      ncco_record_action_path(ncco_record_action),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-xs btn-danger' %>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Ncco Record Action', new_ncco_record_action_path %>
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_ncco_record_action_path,
+            :class => 'btn btn-primary' %>

@@ -1,54 +1,35 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = NccoConnectAction -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
 
-<p>
-  <strong>Event url:</strong>
-  <%= @ncco_connect_action.event_url %>
-</p>
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:event_url) %>:</strong></dt>
+  <dd><%= @ncco_connect_action.event_url %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:event_method) %>:</strong></dt>
+  <dd><%= @ncco_connect_action.event_method %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:backup_url) %>:</strong></dt>
+  <dd><%= @ncco_connect_action.backup_url %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:backup_method) %>:</strong></dt>
+  <dd><%= @ncco_connect_action.backup_method %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:timeout) %>:</strong></dt>
+  <dd><%= @ncco_connect_action.timeout %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:limit) %>:</strong></dt>
+  <dd><%= @ncco_connect_action.limit %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:from) %>:</strong></dt>
+  <dd><%= @ncco_connect_action.from %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:halt_on_fail) %>:</strong></dt>
+  <dd><%= @ncco_connect_action.halt_on_fail %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:endpoint) %>:</strong></dt>
+  <dd><%= @ncco_connect_action.endpoint %></dd>
+</dl>
 
-<p>
-  <strong>Event method:</strong>
-  <%= @ncco_connect_action.event_method %>
-</p>
-
-<p>
-  <strong>Backup url:</strong>
-  <%= @ncco_connect_action.backup_url %>
-</p>
-
-<p>
-  <strong>Backup url:</strong>
-  <%= @ncco_connect_action.backup_url %>
-</p>
-
-<p>
-  <strong>Backup method:</strong>
-  <%= @ncco_connect_action.backup_method %>
-</p>
-
-<p>
-  <strong>Timeout:</strong>
-  <%= @ncco_connect_action.timeout %>
-</p>
-
-<p>
-  <strong>Limit:</strong>
-  <%= @ncco_connect_action.limit %>
-</p>
-
-<p>
-  <strong>From:</strong>
-  <%= @ncco_connect_action.from %>
-</p>
-
-<p>
-  <strong>Halt on fail:</strong>
-  <%= @ncco_connect_action.halt_on_fail %>
-</p>
-
-<p>
-  <strong>Endpoint:</strong>
-  <%= @ncco_connect_action.endpoint %>
-</p>
-
-<%= link_to 'Edit', edit_ncco_connect_action_path(@ncco_connect_action) %> |
-<%= link_to 'Back', ncco_connect_actions_path %>
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              ncco_connect_actions_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_ncco_connect_action_path(@ncco_connect_action), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              ncco_connect_action_path(@ncco_connect_action),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>

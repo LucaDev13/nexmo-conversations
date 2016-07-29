@@ -1,6 +1,5 @@
-<h1>Editing Ncco Record Action</h1>
-
-<%= render 'form', ncco_record_action: @ncco_record_action %>
-
-<%= link_to 'Show', @ncco_record_action %> |
-<%= link_to 'Back', ncco_record_actions_path %>
+<%- model_class = NccoRecordAction -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => model_class.model_name.human.titleize %></h1>
+</div>
+<%= render :partial => 'form' %>

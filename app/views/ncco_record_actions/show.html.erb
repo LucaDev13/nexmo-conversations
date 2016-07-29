@@ -1,79 +1,47 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = NccoRecordAction -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
 
-<p>
-  <strong>Format:</strong>
-  <%= @ncco_record_action.format %>
-</p>
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:format) %>:</strong></dt>
+  <dd><%= @ncco_record_action.format %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:split) %>:</strong></dt>
+  <dd><%= @ncco_record_action.split %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:start_on_answer) %>:</strong></dt>
+  <dd><%= @ncco_record_action.start_on_answer %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:end_on_key) %>:</strong></dt>
+  <dd><%= @ncco_record_action.end_on_key %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:destination_url) %>:</strong></dt>
+  <dd><%= @ncco_record_action.destination_url %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:streamed) %>:</strong></dt>
+  <dd><%= @ncco_record_action.streamed %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:limit) %>:</strong></dt>
+  <dd><%= @ncco_record_action.limit %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:validity_time) %>:</strong></dt>
+  <dd><%= @ncco_record_action.validity_time %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:event_url) %>:</strong></dt>
+  <dd><%= @ncco_record_action.event_url %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:event_method) %>:</strong></dt>
+  <dd><%= @ncco_record_action.event_method %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:backup_url) %>:</strong></dt>
+  <dd><%= @ncco_record_action.backup_url %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:backup_method) %>:</strong></dt>
+  <dd><%= @ncco_record_action.backup_method %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:beep_start) %>:</strong></dt>
+  <dd><%= @ncco_record_action.beep_start %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:beep_finish) %>:</strong></dt>
+  <dd><%= @ncco_record_action.beep_finish %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:secure) %>:</strong></dt>
+  <dd><%= @ncco_record_action.secure %></dd>
+</dl>
 
-<p>
-  <strong>Split:</strong>
-  <%= @ncco_record_action.split %>
-</p>
-
-<p>
-  <strong>Start on answer:</strong>
-  <%= @ncco_record_action.start_on_answer %>
-</p>
-
-<p>
-  <strong>End on key:</strong>
-  <%= @ncco_record_action.end_on_key %>
-</p>
-
-<p>
-  <strong>Destination url:</strong>
-  <%= @ncco_record_action.destination_url %>
-</p>
-
-<p>
-  <strong>Streamed:</strong>
-  <%= @ncco_record_action.streamed %>
-</p>
-
-<p>
-  <strong>Limit:</strong>
-  <%= @ncco_record_action.limit %>
-</p>
-
-<p>
-  <strong>Validity time:</strong>
-  <%= @ncco_record_action.validity_time %>
-</p>
-
-<p>
-  <strong>Event url:</strong>
-  <%= @ncco_record_action.event_url %>
-</p>
-
-<p>
-  <strong>Event method:</strong>
-  <%= @ncco_record_action.event_method %>
-</p>
-
-<p>
-  <strong>Backup url:</strong>
-  <%= @ncco_record_action.backup_url %>
-</p>
-
-<p>
-  <strong>Backup method:</strong>
-  <%= @ncco_record_action.backup_method %>
-</p>
-
-<p>
-  <strong>Beep start:</strong>
-  <%= @ncco_record_action.beep_start %>
-</p>
-
-<p>
-  <strong>Beep finish:</strong>
-  <%= @ncco_record_action.beep_finish %>
-</p>
-
-<p>
-  <strong>Secure:</strong>
-  <%= @ncco_record_action.secure %>
-</p>
-
-<%= link_to 'Edit', edit_ncco_record_action_path(@ncco_record_action) %> |
-<%= link_to 'Back', ncco_record_actions_path %>
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              ncco_record_actions_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_ncco_record_action_path(@ncco_record_action), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              ncco_record_action_path(@ncco_record_action),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>

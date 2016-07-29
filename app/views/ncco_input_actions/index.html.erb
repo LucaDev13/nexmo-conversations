@@ -1,35 +1,44 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Ncco Input Actions</h1>
-
-<table>
+<%- model_class = NccoInputAction -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
   <thead>
     <tr>
-      <th>Time out</th>
-      <th>Max digits</th>
-      <th>Submit on hash</th>
-      <th>Event url</th>
-      <th>Event method</th>
-      <th colspan="3"></th>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:time_out) %></th>
+      <th><%= model_class.human_attribute_name(:max_digits) %></th>
+      <th><%= model_class.human_attribute_name(:submit_on_hash) %></th>
+      <th><%= model_class.human_attribute_name(:event_url) %></th>
+      <th><%= model_class.human_attribute_name(:event_method) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
-
   <tbody>
     <% @ncco_input_actions.each do |ncco_input_action| %>
       <tr>
+        <td><%= link_to ncco_input_action.id, ncco_input_action_path(ncco_input_action) %></td>
         <td><%= ncco_input_action.time_out %></td>
         <td><%= ncco_input_action.max_digits %></td>
         <td><%= ncco_input_action.submit_on_hash %></td>
         <td><%= ncco_input_action.event_url %></td>
         <td><%= ncco_input_action.event_method %></td>
-        <td><%= link_to 'Show', ncco_input_action %></td>
-        <td><%= link_to 'Edit', edit_ncco_input_action_path(ncco_input_action) %></td>
-        <td><%= link_to 'Destroy', ncco_input_action, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%=l ncco_input_action.created_at %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_ncco_input_action_path(ncco_input_action), :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      ncco_input_action_path(ncco_input_action),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-xs btn-danger' %>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Ncco Input Action', new_ncco_input_action_path %>
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_ncco_input_action_path,
+            :class => 'btn btn-primary' %>

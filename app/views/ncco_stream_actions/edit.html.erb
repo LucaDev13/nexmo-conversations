@@ -1,6 +1,5 @@
-<h1>Editing Ncco Stream Action</h1>
-
-<%= render 'form', ncco_stream_action: @ncco_stream_action %>
-
-<%= link_to 'Show', @ncco_stream_action %> |
-<%= link_to 'Back', ncco_stream_actions_path %>
+<%- model_class = NccoStreamAction -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => model_class.model_name.human.titleize %></h1>
+</div>
+<%= render :partial => 'form' %>

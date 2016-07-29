@@ -1,5 +1,5 @@
-<h1>New Ncco Conversation Action</h1>
-
-<%= render 'form', ncco_conversation_action: @ncco_conversation_action %>
-
-<%= link_to 'Back', ncco_conversation_actions_path %>
+<%- model_class = NccoConversationAction -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.new', 'New %{model}'], :model => model_class.model_name.human.titleize %></h1>
+</div>
+<%= render :partial => 'form' %>

@@ -1,12 +1,20 @@
-<p id="notice"><%= notice %></p>
+<div class="well well-sm">A Nexmo Call Control Object (NCCO) is a JSON array of actions that you use to control the flow of a Voice API call.
 
-<h1>Nccos</h1>
+This section tells you:
 
-<p>A Nexmo Call Control Object (NCCO) is a JSON array of actions that you use to control the flow of a Voice API Call. The Call event model is asynchronous. A static or dynamically created NCCO script provides the business logic for your Call.
-The general schema of an NCCO is:</p>
+About Nexmo Call Control Objects
+Controlling a Call with Nexmo Call Control Objects
 
-<p>
-  [
+About Nexmo Call Control Objects
+
+The Call event model is asynchronous. A static or dynamically created NCCO script provides the business logic for your Call. When a Call starts, Platform makes a synchronous request to your webhook endpoint at answer_url and retrieve the NCCO object that controls the Call.
+
+The general schema of an NCCO is:
+</div>
+
+<br>
+<code class="language-json" data-lang="json">
+[
   {
     "action": "<value>",
     "<option1>": "<value>",
@@ -23,12 +31,14 @@ The general schema of an NCCO is:</p>
     ]
   }
 ]
-</p>
+</code>
 
-<p>The following words are reserved:</p>
+<br><br>
+<div class="well well-sm">
+The elements of the NCCO schema are:
 
-<p>action - something to be done in the Call</p>
-<p>type - how to customize the action</p>
-<p>The order of actions in the NCCO controls the flow of the Call. This is called the stack. Unless explicitly halted NCCOs are executed in order (FIFO). When an action is completed, the next action in the stack is executed. When all the actions in the NCCO are complete, the Call ends.</p>
-
-<p>For more information, see Nexmo Call Control Objects</p>
+action - something to be done in the Call.
+option - how to customize an action.
+type - describes an option. For example, type=phone for an endpoint option.
+The order of actions in the NCCO controls the flow of the Call. This is called the stack. Order matters. Unless explicitly halted NCCO are executed on a FIFO basis. When an action is completed, the next action in the stack is executed. When all the actions in the NCCO are complete, the Call ends.
+</div>
