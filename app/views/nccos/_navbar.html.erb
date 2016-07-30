@@ -13,12 +13,16 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
       <ul class="nav navbar-nav">
         <!-- <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li> -->
+        <li><%= link_to "Event URLs", event_urls_path %></li>
+        <li class="divider"></li>
+
         <li><%= link_to "NCCO - Input", ncco_input_actions_path %></li>
         <li><%= link_to "NCCO - Stream", ncco_stream_actions_path %></li>
         <li><%= link_to "NCCO - Talk", ncco_talk_actions_path %></li>
         <li><%= link_to "NCCO - Connect", ncco_connect_actions_path %></li>
         <li><%= link_to "NCCO - Record", ncco_record_actions_path %></li>
         <li><%= link_to "NCCO - Conversation", ncco_conversation_actions_path %></li>
+
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">NCCO actions<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
