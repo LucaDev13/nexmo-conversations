@@ -29,7 +29,7 @@ class NccoConnectActionsController < ApplicationController
     respond_to do |format|
       if @ncco_connect_action.save
         format.html { redirect_to @ncco_connect_action, notice: 'Ncco connect action was successfully created.' }
-        format.json { render :show, status: :created, location: @ncco_connect_action }
+        format.json { render :show, status: :created, location: (@ncco_connect_action) }
       else
         format.html { render :new }
         format.json { render json: @ncco_connect_action.errors, status: :unprocessable_entity }

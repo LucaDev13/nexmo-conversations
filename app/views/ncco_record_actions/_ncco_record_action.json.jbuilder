@@ -1,2 +1,1 @@
-json.extract! ncco_record_action, :id, :format, :split, :start_on_answer, :end_on_key, :destination_url, :streamed, :limit, :validity_time, :event_url, :event_method, :backup_url, :backup_method, :beep_start, :beep_finish, :secure, :created_at, :updated_at
-json.url ncco_record_action_url(ncco_record_action, format: :json)
+json.extract! ncco_record_action,  :format, :split, :start_on_answer, :end_on_key, :destination_url, :streamed, :limit, :validity_time, :event_url, :event_method, :backup_url, :backup_method, :beep_start, :beep_finish, :secure
