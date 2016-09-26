@@ -11,6 +11,130 @@
     </div>
   <% end %>
 
+  <div class="form-group">
+    <%= f.label :uuid, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :uuid, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:uuid) %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :conversation_uuid, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :conversation_uuid, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:conversation_uuid) %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :to, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :to, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:to) %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :from, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :from, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:from) %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :from, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :from, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:from) %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :direction, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :direction, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:direction) %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :recording_url, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :recording_url, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:recording_url) %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :rate, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :rate, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:rate) %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :start_time, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :start_time, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:start_time) %>
+  </div>
+
+  <br>
+
+  <div class="form-group">
+    <%= f.label :from, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :from, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:from) %>
+  </div>
+
+  <br>
+
+  <div class="form-group">
+    <%= f.label :status, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :status, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:status) %>
+  </div>
+
+  <br>
+
+  <div class="form-group">
+    <%= f.label :price, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :price, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:price) %>
+  </div>
+
+   <br>
+
+  <div class="form-group">
+    <%= f.label :duration, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :duration, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:duration) %>
+  </div>
+
+   <br>
+
+  <div class="form-group">
+    <%= f.label :end_time, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :end_time, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:end_time) %>
+  </div>
+
+   <br>
+
   <div class="actions">
     <%= f.submit %>
   </div>

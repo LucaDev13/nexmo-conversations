@@ -10,11 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160729160755) do
+ActiveRecord::Schema.define(version: 20160926205400) do
 
   create_table "event_urls", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.string   "uuid"
+    t.string   "conversation_uuid"
+    t.string   "to"
+    t.string   "from"
+    t.string   "direction"
+    t.string   "recording_url"
+    t.string   "rate"
+    t.string   "start_time"
+    t.string   "network"
+    t.string   "status"
+    t.string   "price"
+    t.string   "duration"
+    t.string   "end_time"
   end
 
   create_table "ncco_connect_actions", force: :cascade do |t|

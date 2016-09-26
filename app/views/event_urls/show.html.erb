@@ -1,4 +1,69 @@
 <p id="notice"><%= notice %></p>
 
+<p>
+  <strong>Uuid</strong>
+  <%= @event_url.uuid %>
+</p>
+
+<p>
+  <strong>conversation_uuid</strong>
+  <%= @event_url.conversation_uuid %>
+</p>
+
+<p>
+  <strong>to</strong>
+  <%= @event_url.to %>
+</p>
+
+<p>
+  <strong>from</strong>
+  <%= @event_url.from %>
+</p>
+
+<p>
+  <strong>direction</strong>
+  <%= @event_url.direction %>
+</p>
+
+<p>
+  <strong>recording_url</strong>
+  <%= @event_url.recording_url %>
+</p>
+
+<p>
+  <strong>rate</strong>
+  <%= @event_url.rate %>
+</p>
+
+<p>
+  <strong>start_time</strong>
+  <%= @event_url.start_time %>
+</p>
+
+<p>
+  <strong>network</strong>
+  <%= @event_url.network %>
+</p>
+
+<p>
+  <strong>status</strong>
+  <%= @event_url.status %>
+</p>
+
+<p>
+  <strong>price</strong>
+  <%= @event_url.price %>
+</p>
+
+<p>
+  <strong>duration</strong>
+  <%= @event_url.duration %>
+</p>
+
+<p>
+  <strong>end_time</strong>
+  <%= @event_url.end_time %>
+</p>
+
 <%= link_to 'Edit', edit_event_url_path(@event_url) %> |
 <%= link_to 'Back', event_urls_path %>

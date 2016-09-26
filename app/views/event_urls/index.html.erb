@@ -2,16 +2,42 @@
 
 <h1>Event Urls</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
-      <th colspan="3"></th>
+        <th>uuid</th>
+        <th>conversation_uuid</th>
+        <th>to</th>
+        <th>from</th>
+        <th>direction</th>
+        <th>recording_url</th>
+        <th>rate</th>
+        <th>start_time</th>
+        <th>network</th>
+        <th>status</th>
+        <th>price</th>
+        <th>duration</th>
+        <th>end_time</th>
     </tr>
   </thead>
 
   <tbody>
     <% @event_urls.each do |event_url| %>
       <tr>
+        <td><%= event_url.uuid %></td>
+        <td><%= event_url.conversation_uuid %></td>
+        <td><%= event_url.to %></td>
+        <td><%= event_url.from %></td>
+        <td><%= event_url.direction %></td>
+        <td><%= event_url.recording_url %></td>
+        <td><%= event_url.rate %></td>
+        <td><%= event_url.start_time %></td>
+        <td><%= event_url.network %></td>
+        <td><%= event_url.status %></td>
+        <td><%= event_url.price %></td>
+        <td><%= event_url.duration %></td>
+        <td><%= event_url.end_time %></td>
+
         <td><%= link_to 'Show', event_url %></td>
         <td><%= link_to 'Edit', edit_event_url_path(event_url) %></td>
         <td><%= link_to 'Destroy', event_url, method: :delete, data: { confirm: 'Are you sure?' } %></td>

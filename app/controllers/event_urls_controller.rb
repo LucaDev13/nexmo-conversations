@@ -69,6 +69,6 @@ class EventUrlsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_url_params
-      params.fetch(:event_url, {})
+      params.permit(:start_time, :rate, :to, :from, :uuid, :conversation_uuid, :status, :direction, :recording_url, :rate, :start_time, :network, :price, :duration, :end_time)
     end
 end
