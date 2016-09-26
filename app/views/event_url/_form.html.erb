@@ -1,13 +1,17 @@
-<%= form_for(event_url) do |f| %>
-  <% if event_url.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(event_url.errors.count, "error") %> prohibited this event_url from being saved:</h2>
+<%= form_for @event_url, :html => { :class => "form-horizontal event_url" } do |f| %>
 
-      <ul>
-      <% event_url.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+  <% if @event_url.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@event_url.errors.count, "error") %> prohibited this event_url from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @event_url.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
     </div>
   <% end %>
 
@@ -18,7 +22,6 @@
     </div>
     <%=f.error_span(:uuid) %>
   </div>
-
   <div class="form-group">
     <%= f.label :conversation_uuid, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
@@ -26,7 +29,6 @@
     </div>
     <%=f.error_span(:conversation_uuid) %>
   </div>
-
   <div class="form-group">
     <%= f.label :to, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
@@ -34,7 +36,6 @@
     </div>
     <%=f.error_span(:to) %>
   </div>
-
   <div class="form-group">
     <%= f.label :from, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
@@ -42,7 +43,6 @@
     </div>
     <%=f.error_span(:from) %>
   </div>
-
   <div class="form-group">
     <%= f.label :direction, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
@@ -50,7 +50,6 @@
     </div>
     <%=f.error_span(:direction) %>
   </div>
-
   <div class="form-group">
     <%= f.label :recording_url, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
@@ -58,7 +57,6 @@
     </div>
     <%=f.error_span(:recording_url) %>
   </div>
-
   <div class="form-group">
     <%= f.label :rate, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
@@ -66,7 +64,6 @@
     </div>
     <%=f.error_span(:rate) %>
   </div>
-
   <div class="form-group">
     <%= f.label :start_time, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
@@ -74,9 +71,13 @@
     </div>
     <%=f.error_span(:start_time) %>
   </div>
-
-  <br>
-
+  <div class="form-group">
+    <%= f.label :network, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :network, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:network) %>
+  </div>
   <div class="form-group">
     <%= f.label :status, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
@@ -84,9 +85,6 @@
     </div>
     <%=f.error_span(:status) %>
   </div>
-
-  <br>
-
   <div class="form-group">
     <%= f.label :price, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
@@ -94,9 +92,6 @@
     </div>
     <%=f.error_span(:price) %>
   </div>
-
-   <br>
-
   <div class="form-group">
     <%= f.label :duration, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
@@ -104,9 +99,6 @@
     </div>
     <%=f.error_span(:duration) %>
   </div>
-
-   <br>
-
   <div class="form-group">
     <%= f.label :end_time, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
@@ -115,9 +107,12 @@
     <%=f.error_span(:end_time) %>
   </div>
 
-   <br>
-
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                event_urls_path, :class => 'btn btn-default' %>
+    </div>
   </div>
+
 <% end %>
