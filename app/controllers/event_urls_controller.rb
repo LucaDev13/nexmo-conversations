@@ -4,7 +4,7 @@ class EventUrlsController < ApplicationController
   # GET /event_urls
   # GET /event_urls.json
   def index
-    @event_urls = EventUrl.all
+    @event_urls = EventUrl.order(created_at: :desc)
   end
 
   # GET /event_urls/1
