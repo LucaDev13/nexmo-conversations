@@ -4,7 +4,11 @@ class EventUrlsController < ApplicationController
   # GET /event_urls
   # GET /event_urls.json
   def index
-    @event_urls = EventUrl.order(created_at: :desc)
+    if params[:search]
+        @event_urls = EventUrl.search(params[:search]).order(created_at: :desc)
+    else
+        @event_urls = EventUrl.order(created_at: :desc)
+    end
   end
 
   # GET /event_urls/1
@@ -69,6 +73,6 @@ class EventUrlsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_url_params
-      params.permit(:start_time, :rate, :to, :from, :uuid, :conversation_uuid, :status, :direction, :recording_url, :rate, :start_time, :network, :price, :duration, :end_time)
+      params.permit(:start_time, :rate, :to, :from, :uuid, :conversation_uuid, :status, :direction, :recording_url, :rate, :start_time, :network, :price, :duration, :end_time, :search)
     end
 end
