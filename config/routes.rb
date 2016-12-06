@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
 
+  root to: 'nccos#index'
+
   devise_for :admins
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+
   resources :event_urls
-  root to: 'nccos#index'
-  
   resources :nccos
   resources :ncco_input_actions
   resources :ncco_stream_actions
