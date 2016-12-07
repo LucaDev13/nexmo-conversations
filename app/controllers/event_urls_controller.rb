@@ -1,4 +1,5 @@
 class EventUrlsController < ApplicationController
+  skip_before_filter :verify_authenticity_token
   before_action :set_event_url, only: [:show, :edit, :update, :destroy]
 
   # GET /event_urls
