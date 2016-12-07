@@ -1,5 +1,5 @@
 class EventUrlsController < ApplicationController
-
+  skip_before_action :authenticate_admin!, only: [:new, :create]
   before_action :set_event_url, only: [:show, :edit, :update, :destroy]
 
   # GET /event_urls
