@@ -88,6 +88,16 @@
   <br>
 
   <div class="form-group">
+    <%= f.label :dtmf, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :dtmf, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:dtmf) %>
+  </div>
+
+  <br>
+
+  <div class="form-group">
     <%= f.label :price, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
       <%= f.text_field :price, :class => 'form-control' %>

@@ -1,5 +1,6 @@
 class EventUrlsController < ApplicationController
   skip_before_action :authenticate_admin!, only: [:new, :create]
+
   before_action :set_event_url, only: [:show, :edit, :update, :destroy]
 
   # GET /event_urls
@@ -74,6 +75,6 @@ class EventUrlsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_url_params
-      params.permit(:start_time, :rate, :to, :from, :uuid, :conversation_uuid, :status, :direction, :recording_url, :rate, :start_time, :network, :price, :duration, :end_time, :search)
+      params.permit(:start_time, :rate, :to, :from, :uuid, :conversation_uuid, :status, :direction, :recording_url, :rate, :start_time, :network, :price, :duration, :end_time, :search, :dtmf)
     end
 end

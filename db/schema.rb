@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161206184912) do
+ActiveRecord::Schema.define(version: 20170404171206) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 20161206184912) do
     t.string   "price"
     t.string   "duration"
     t.string   "end_time"
+    t.string   "dtmf"
   end
 
   create_table "ncco_connect_actions", force: :cascade do |t|
