@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root to: 'nccos#index'
+  root to: 'pages#index'
 
   devise_for :admins
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'

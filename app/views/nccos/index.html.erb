@@ -1,109 +1,36 @@
+<div>
 
-<div class="bs-docs-header">
-    <div class="container-fluid">
-      <h1>Conversations Callbacks App</h1>
-       <h3>Search and report on the data that Nexmo sends to your webhooks.</h3>
-         <br>
-         <h2>Some of Nexmo Voice API features:</h2>
-         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingOne">
-      <h4 class="panel-title">
-        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          Powerful Call Control
-        </a>
-      </h4>
-    </div>
-    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-      <div class="panel-body">
-        Control the flow of your calls with a powerful set of call control features allowing complex voice use cases.
-      </div>
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingTwo">
-      <h4 class="panel-title">
-        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          Call Recording
-        </a>
-      </h4>
-    </div>
-    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-      <div class="panel-body">
-        Record and store inbound or outbound (software-initiated) calls. Split-recording and dynamic contextual recording coming soon.
-      </div>
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingThree">
-      <h4 class="panel-title">
-        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          Voice Conferencing
-        </a>
-      </h4>
-    </div>
-    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-      <div class="panel-body">
-        Create a conference in one line of code. As simple as you want or with powerful enterprise features.
-      </div>
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingThree">
-      <h4 class="panel-title">
-        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-          Speak your Customers’ Language
-        </a>
-      </h4>
-    </div>
-    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
-      <div class="panel-body">
-        We offer a text to speech engine in over 23 languages in different genders and accents.
-      </div>
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingThree">
-      <h4 class="panel-title">
-        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-          Inbound Call Processing
-        </a>
-      </h4>
-    </div>
-    <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
-      <div class="panel-body">
-        Manage inbound calls in developer-friendly JSON with Nexmo Call Control Objects.
-      </div>
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingSix">
-      <h4 class="panel-title">
-        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-          Voice Proxy
-        </a>
-      </h4>
-    </div>
-    <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
-      <div class="panel-body">
-        Protect your customers’ identities by masking their phone numbers with a voice proxy solution.
-      </div>
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingSeven">
-      <h4 class="panel-title">
-        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-          Voice Menus (IVRs)
-        </a>
-      </h4>
-    </div>
-    <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
-      <div class="panel-body">
-        Protect your customers’ identities by masking their phone numbers with a voice proxy solution.
-      </div>
-    </div>
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#record" aria-controls="record" role="tab" data-toggle="tab">Record</a></li>
+    <li role="presentation"><a href="#conversation" aria-controls="conversation" role="tab" data-toggle="tab">Conversation</a></li>
+    <li role="presentation"><a href="#connect" aria-controls="connect" role="tab" data-toggle="tab">Connect</a></li>
+    <li role="presentation"><a href="#talk" aria-controls="talk" role="tab" data-toggle="tab">Talk</a></li>
+    <li role="presentation"><a href="#stream" aria-controls="stream" role="tab" data-toggle="tab">Stream</a></li>
+    <li role="presentation"><a href="#input" aria-controls="input" role="tab" data-toggle="tab">Input</a></li>
+  </ul>
 
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="record">Use the record action to record a Call or part of a Call: The record action is asynchronous. Recording starts when the record action is executed in the NCCO and finishes when the synchronous condition in the action is met. That is, endOnSilence, timeOut or endOnKey. If you do not set a synchronous condition, the Voice API immediately executes the next NCCO without recording.
 
-    </div>
+For information about the workflow to follow, see Recordings.</div>
+    <div role="tabpanel" class="tab-pane" id="conversation">You can use the conversation action to create standard or moderated Conversations. The first person to call the virtual number assigned to the Conversation creates it. This action is synchronous, the Conversation lasts until the number of participants is 0.
+
+    Note: you can invite up to 50 people to your Conversation.
+</div>
+    <div role="tabpanel" class="tab-pane" id="connect">You can use the connect action to connect a call to endpoints such as phone numbers.
+
+This action is synchronous, after a connect the next action in the NCCO stack is processed. A connect action ends when the endpoint you are calling is busy or unavailable. You ring endpoints sequentially by nesting connect actions.</div>
+    <div role="tabpanel" class="tab-pane" id="talk">The talk action sends synthesized speech to a Conversation.
+
+The text provided in the talk action can either be plain, or formatted using SSML. SSML tags provide further instructions to the text-to-speech synthesiser which allow you to set pitch, pronunciation and to combine together text in multiple languages. SSML tags are XML-based and sent inline in the JSON string.
+
+By default, the talk action is synchronous. However, if you set bargeIn to true you must set an input action later in the NCCO stack. </div>
+    <div role="tabpanel" class="tab-pane" id="stream">The stream action allows you to send an audio stream to a Conversation
+
+By default, the talk action is synchronous. However, if you set bargeIn to true you must set an input action later in the NCCO stack. </div>
+    <div role="tabpanel" class="tab-pane" id="input">You can use the input action to collect digits input by the person you are calling. This action is synchronous, Nexmo processes the input and forwards it in the parameters sent to the eventURL webhook endpoint you configure in your request. Your webhook endpoint should return another NCCO that replaces the existing NCCO and controls the Call based on the user input. You could use this functionality to create an Interactive Voice Response (IVR). For example, if your user presses 4, you return a connect NCCO that forwards the call to your sales department.</div>
+  </div>
+
 </div>
