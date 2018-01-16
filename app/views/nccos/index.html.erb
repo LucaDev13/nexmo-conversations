@@ -1,99 +1,109 @@
+
 <div class="bs-docs-header">
-    <div class="container">
-      <h1>Nexmo Voice Api App</h1>
-       <h3>The Nexmo Voice API is a REST API that enables developer to easily design and implement programmable Voice into web
-         applications. </h3>
+    <div class="container-fluid">
+      <h1>Conversations Callbacks App</h1>
+       <h3>Search and report on the data that Nexmo sends to your webhooks.</h3>
          <br>
-         <h4>With this app you can search and report on the data that Nexmo sends to your webhooks, specifically the answer_url webhook.</h4>
-          <br>
-          <h2>Some of Nexmo Voice API features:</h2>
-          <ul class="list-group">
-                      <li class="list-group-item">
-                        <b>Powerful Call Control</b>
-                Control the flow of your calls with a powerful set of call control features allowing complex voice use cases. </li>
+         <h2>Some of Nexmo Voice API features:</h2>
+         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Powerful Call Control
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+        Control the flow of your calls with a powerful set of call control features allowing complex voice use cases.
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Call Recording
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body">
+        Record and store inbound or outbound (software-initiated) calls. Split-recording and dynamic contextual recording coming soon.
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Voice Conferencing
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      <div class="panel-body">
+        Create a conference in one line of code. As simple as you want or with powerful enterprise features.
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          Speak your Customers’ Language
+        </a>
+      </h4>
+    </div>
+    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+      <div class="panel-body">
+        We offer a text to speech engine in over 23 languages in different genders and accents.
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+          Inbound Call Processing
+        </a>
+      </h4>
+    </div>
+    <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+      <div class="panel-body">
+        Manage inbound calls in developer-friendly JSON with Nexmo Call Control Objects.
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingSix">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+          Voice Proxy
+        </a>
+      </h4>
+    </div>
+    <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+      <div class="panel-body">
+        Protect your customers’ identities by masking their phone numbers with a voice proxy solution.
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingSeven">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+          Voice Menus (IVRs)
+        </a>
+      </h4>
+    </div>
+    <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+      <div class="panel-body">
+        Protect your customers’ identities by masking their phone numbers with a voice proxy solution.
+      </div>
+    </div>
 
-                <li class="list-group-item">
-                <b>Call Recording</b>
-                Record and store inbound or outbound (software-initiated) calls. Split-recording and dynamic contextual recording coming soon.</li>
 
-                <li class="list-group-item">
-                <b>Voice Conferencing</b>
-                Create a conference in one line of code. As simple as you want or with powerful enterprise features.</li>
-
-                <li class="list-group-item">
-                <b>Speak your Customers’ Language</b>
-                We offer a text to speech engine in over 23 languages in different genders and accents.</li>
-
-                <li class="list-group-item">
-                <b>Inbound Call Processing</b>
-                Manage inbound calls in developer-friendly JSON with Nexmo Call Control Objects.</li>
-
-                <li class="list-group-item">
-                <b>Voice Proxy</b>
-                Protect your customers’ identities by masking their phone numbers with a voice proxy solution.</li>
-
-                <li class="list-group-item">
-                <b>Voice Menus</b>
-                Create interactive voice response (IVR) menus on the fly and integrate them easily into your application.</li>
-
-                <li class="list-group-item">
-                <b>True Per-Second Billing</b>
-                Only get charged for what you use, down to the second, with no long-term contracts.</li>
-
-                <li class="list-group-item">
-                <b>Telco Features</b>
-                Get all the features of a telco, such as: dynamic CLI, DTMF support and a wide range of codecs.</li>
-
-                <li class="list-group-item">
-                <b>Access real-time Data</b>
-                Monitor costs and other analytics in real time through our online dashboard.</li>
-
-                <li class="list-group-item">
-                <b>SIP Trunking</b>
-                We keep latency to a minimum using our simple SIP trunks with geographical routing.
-                    A Nexmo Call Control Object (NCCO) is a JSON array of actions that you use to control the flow of a Voice API call.</li>
-            </ul>
-
-          <h2>Important concepts for the Voice API</h2>
-              <h3>Nexmo Call Control Objects - NCCO</h3>
-
-              <h4>Controlling a Call with Nexmo Call Control Objects:</h4>
-
-              The Call event model is asynchronous.
-              A static or dynamically created NCCO script provides the business logic for your Call.
-              When a Call starts, Platform makes a synchronous request to your webhook endpoint at answer_url and retrieve the NCCO object that controls the Call.
-
-              The general schema of an NCCO is:
-
-
-              <br>
-              <code class="language-json" data-lang="json">
-              [
-                {
-                  "action": "<value>",
-                  "<option1>": "<value>",
-                  "<option2>": [
-                    {
-                      "type": "<value>",
-                      "<option1>": "<value>"
-                    },
-                    {
-                      "type": "<value>",
-                      "<option1>": "<value>",
-                      "<option2>": "<value>"
-                    }
-                  ]
-                }
-              ]
-              </code>
-
-              <br><br>
-
-        The elements of the NCCO schema are:
-
-        action - something to be done in the Call.
-        option - how to customize an action.
-        type - describes an option. For example, type=phone for an endpoint option.
-        The order of actions in the NCCO controls the flow of the Call. This is called the stack. Order matters. Unless explicitly halted NCCO are executed on a FIFO basis. When an action is completed, the next action in the stack is executed. When all the actions in the NCCO are complete, the Call ends.
-   </div>
+    </div>
 </div>
