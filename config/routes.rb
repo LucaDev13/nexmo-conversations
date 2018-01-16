@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'pages/vapi'
+
   root to: 'pages#index'
 
   devise_for :admins
