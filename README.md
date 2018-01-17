@@ -4,5 +4,4 @@
 * Rails 5.0
 * Rails_admin
 
-* Nexmo call events sent to event_url webhook saved in DB and ordered
-*
+* Nexmo Voice API call events received at event_url webhook saved in DB and ordered
