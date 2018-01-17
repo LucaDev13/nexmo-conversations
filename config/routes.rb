@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
-  get 'pages/vapi'
-
+  get 'voice' => 'pages#vapi'
+  
   root to: 'pages#index'
 
   devise_for :admins
