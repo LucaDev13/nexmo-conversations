@@ -1,0 +1,15 @@
+$(document).ready(function() {
+
+var client = algoliasearch('<%= ENV['ALGOLIASEARCH_APPLICATION_ID'] %>', '<%= ENV['ALGOLIASEARCH_API_KEY_SEARCH'] %>');
+var index = client.initIndex('EventUrl');
+var fSearch = document.querySelector('#search').value;
+
+index.search(fSearch, { hitsPerPage: 10, page: 0 })
+  .then(function searchDone(content) {
+    console.log(content)
+  })
+  .catch(function searchFailure(err) {
+    console.error(err);
+  });
+
+});

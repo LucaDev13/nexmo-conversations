@@ -1,10 +1,8 @@
 class EventUrl < ApplicationRecord
+ include AlgoliaSearch
 
-  def self.search(search)
-    if search
-    where('uuid || conversation_uuid || direction || recording_url  LIKE ?', "%#{search}%")
-    else
-    order('id DESC')
-   end
+  algoliasearch do
+    searchableAttributes ['uuid', 'conversation_uuid', 'email']
   end
+
 end

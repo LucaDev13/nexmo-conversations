@@ -13,4 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require algolia/v3/algoliasearch.min
+//= require algoliasearchv3
 //= require_tree .

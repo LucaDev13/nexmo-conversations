@@ -7,7 +7,7 @@ class EventUrlsController < ApplicationController
   # GET /event_urls.json
   def index
     if params[:search]
-        @event_urls = EventUrl.search(params[:search]).order(created_at: :desc)
+        @event_urls = EventUrl.order(created_at: :desc)
     else
         @event_urls = EventUrl.order(created_at: :desc)
     end
