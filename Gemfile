@@ -13,8 +13,11 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'rails_admin', '~> 1.0'
 gem 'devise'
-gem 'algoliasearch-rails'
 gem 'figaro'
+
+gem 'algoliasearch-rails'
+gem 'hogan_assets'
+
 
 group :production do
   gem 'pg', '< 1.0'
